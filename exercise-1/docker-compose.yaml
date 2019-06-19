@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  exercise1:
+    image: exercise1
+    ports:
+      - "8080:80"
+    networks:
+      - frontend
+    deploy:
+      replicas: 1
+
+networks:
+  frontend:
