@@ -1,3 +1,3 @@
 {
-    "apiUrl": "http://ra-api/api"
+    "apiUrl": "http://localhost:4300/api"
 }

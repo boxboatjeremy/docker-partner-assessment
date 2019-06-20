@@ -1,1 +1,1 @@
-Server=tcp:ra-srv.database.windows.net,1433;Initial Catalog=ra-db;Persist Security Info=False;User ID=ra-db-admin;Password=ComplexPassword123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+Server=tcp:ra-srv.database.windows.net,1433;Initial Catalog=ra-db;Persist Security Info=False;User ID=ra-db-admin;Password=ComplexPassword123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;
