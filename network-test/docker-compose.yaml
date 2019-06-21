@@ -1,24 +1,21 @@
 version: "3.7"
 
 services:
-  exercise1:
-    image: exercise1
+  nginx_frontend:
+    image: nginx-reverse-proxy
     ports:
-      - "8080:80"
+      - "300:300"
     networks:
-      - frontend
-    deploy:
-      replicas: 1
-  exercise2:
-    image: exercise2
+      - traffic_test
+  nginx_backend:
+    image: nginx-100-200
     ports:
-      - "8081:80"
+      - "7080:80"
+      - "7100:100"
+      - "7200:200"
     networks:
-      - frontend
-    deploy:
-      replicas: 1
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - traffic_test
 
 networks:
-  frontend:
+  traffic_test:
+    driver: overlay
